@@ -8,8 +8,8 @@
 body {
     /* background: rgb(252, 252, 252);
     background: radial-gradient(circle, rgba(112, 213, 215, 1) 0%, rgba(9, 121, 118, 1) 48%, rgba(0, 212, 255, 1) 100%); */
-    background: rgb(196, 96, 2);
-    background: radial-gradient(circle, rgba(196, 96, 2, 0.8911939775910365) 32%, rgba(196, 96, 2, 1) 94%);
+    background: rgb(219, 219, 219);
+    background: radial-gradient(circle, rgba(219, 219, 219, 0.7091211484593838) 0%, rgba(208, 208, 208, 0.7875525210084033) 67%);
     background-repeat: no-repeat;
     height: auto;
     min-height: 100vh;
