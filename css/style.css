@@ -8,8 +8,8 @@
 body {
     /* background: rgb(252, 252, 252);
     background: radial-gradient(circle, rgba(112, 213, 215, 1) 0%, rgba(9, 121, 118, 1) 48%, rgba(0, 212, 255, 1) 100%); */
-    background: rgb(219, 219, 219);
-    background: radial-gradient(circle, rgba(219, 219, 219, 0.7091211484593838) 0%, rgba(208, 208, 208, 0.7875525210084033) 67%);
+    background: rgb(255, 238, 255);
+    background: linear-gradient(97deg, rgba(255, 238, 255, 1) 0%, rgba(215, 255, 254, 1) 28%);
     background-repeat: no-repeat;
     height: auto;
     min-height: 100vh;
@@ -27,7 +27,7 @@ body {
     transform: translateY(20%);
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(117, 117, 117, 0.555);
+    background-color: transparent;
     border-radius: 2rem;
     box-shadow: 0px 0 31px 0px rgba(104, 104, 104, 0.534);
     backdrop-filter: blur(15px);
