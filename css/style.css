@@ -1,3 +1,12 @@
+:root {
+    :root {
+        --bg: hsl(0 0% 8%);
+        --white: hsl(0 0% 98%);
+        --accent: hsl(0 0% 15%);
+        --secondary: hsl(0 0% 25%);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +17,8 @@
 body {
     /* background: rgb(252, 252, 252);
     background: radial-gradient(circle, rgba(112, 213, 215, 1) 0%, rgba(9, 121, 118, 1) 48%, rgba(0, 212, 255, 1) 100%); */
-    background: rgb(105, 11, 34);
-    background: linear-gradient(4deg, rgba(105, 11, 34, 1) 0%, rgba(241, 227, 211, 1) 100%);
+    background: rgb(255, 248, 241);
+    background: linear-gradient(339deg, rgba(255, 248, 241, 1) 0%, rgba(255, 238, 233, 1) 100%);
     background-repeat: no-repeat;
     height: auto;
     min-height: 100vh;
@@ -160,105 +169,83 @@ img {
     }
 }
 
-/* menu items */
-
-.card {
-    width: var(--card-width);
-    height: var(--card-height);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 36px;
-    perspective: 2500px;
-    margin: 0 50px;
-    border-radius: 5px;
+/* fsedfaesd */
+li {
+    list-style: none;
 }
 
-.cover-image {
+.accordion {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.accordion__item {
+    position: relative;
+    flex-grow: 1;
+    width: 100px;
+    height: 100%;
+    background: var(--bg);
+    transition: flex-grow 300ms ease;
+    overflow: hidden;
+}
+
+.accordion__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    object-position: center;
+    transition: transform 0.3s ease;
 }
 
-.wrapper {
-    transition: all 0.5s;
+.accordion__overlay {
     position: absolute;
+    inset: 0;
     width: 100%;
-    z-index: -1;
-    border-radius: 5px;
-}
-
-.card:hover .wrapper {
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    border-radius: 5px;
-}
-
-.wrapper::before,
-.wrapper::after {
-    content: "";
-    opacity: 0;
-    width: 100%;
-    height: 80px;
-    transition: all 0.5s;
-    position: absolute;
-    left: 0;
-    border-radius: 5px;
-}
-
-.wrapper::before {
-    top: 0;
     height: 100%;
-    background-image: linear-gradient(to top,
-            transparent 46%,
-            rgba(12, 13, 19, 0.5) 68%,
-            rgba(12, 13, 19) 97%);
-    border-radius: 5px;
-}
-
-.wrapper::after {
-    bottom: 0;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
     opacity: 1;
-    background-image: linear-gradient(to bottom,
-            transparent 46%,
-            rgba(12, 13, 19, 0.5) 68%,
-            rgba(12, 13, 19) 97%);
-    border-radius: 5px;
+    transition: opacity 0.4s ease-out;
 }
 
-.card:hover .wrapper::before,
-.wrapper::after {
-    opacity: 1;
-}
-
-.card:hover .wrapper::after {
-    height: 120px;
-}
-
-.title {
-    width: 100%;
-    transition: transform 0.5s;
-}
-
-.card:hover .title {
-    transform: translate3d(0%, -50px, 100px);
-}
-
-.character {
-    width: 100%;
-    opacity: 0;
-    transition: all 0.5s;
+.accordion__title {
     position: absolute;
-    z-index: -1;
+    bottom: 0.5em;
+    right: 0.5em;
+    writing-mode: vertical-rl;
+    color: var(--white);
+    font-size: clamp(1em, 3vw - 0.5em, 3em);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 
-.card:hover .character {
+.accordion__description {
+    position: absolute;
+    width: 60%;
+    left: 1em;
+    bottom: 1em;
+    color: var(--white);
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    transition-property: opacity, transform;
+}
+
+.accordion__item:hover {
+    flex-grow: 2;
+}
+
+.accordion__item:hover .accordion__overlay {
+    opacity: 0.5;
+}
+
+.accordion__item:hover .accordion__description {
+    transform: translateY(0);
     opacity: 1;
-    transform: translate3d(0%, -30%, 100px);
 }
 
-/* menu items */
+.accordion__item:hover .accordion__image {
+    transform: scale(1.1);
+}
+
+/* fsedfaesd */
