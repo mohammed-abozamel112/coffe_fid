@@ -26,7 +26,7 @@ body {
     flex-direction: column;
 }
 
-.hero-section{
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +35,7 @@ body {
     margin: auto;
     background: transparent;
 }
+
 .hero-div {
     display: flex;
     align-items: center;
@@ -186,6 +187,23 @@ li {
     display: flex;
     width: 80%;
     height: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .accordion {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0 !important;
+    }
+
+    .accordion__item {
+        position: relative;
+        flex-grow: 1;
+        width: 100% !important;
+        height: 100%;
+    }
+
 }
 
 .accordion__item {
